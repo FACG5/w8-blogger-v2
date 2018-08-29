@@ -19,3 +19,9 @@ body {
 .navbar .title {
   font-size: 23rem;
 }
+
+
+.main-container{
+  display: flex;
+  justify-content: center;
+}
