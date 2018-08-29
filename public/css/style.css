@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0px;
+  background-color: black;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 17rem;
+}
+
+.navbar .title {
+  font-size: 23rem;
+}
+
+
+.main-container{
+  display: flex;
+  justify-content: center;
+}
