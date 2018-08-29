@@ -19,7 +19,8 @@ INSERT INTO users (name,email,password) VALUES
 );
 
 INSERT INTO posts (post_body, user_id) VALUES
-('this is blog',1);
+('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates neque autem vel, perspiciatis ipsa vitae placeat eos sint quae doloremque nulla ut id dolore quo architecto expedita? Quisquam, quaerat.1',1),
+('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates neque autem vel, perspiciatis ipsa vitae placeat eos sint quae doloremque nulla ut id dolore quo architecto expedita? Quisquam, quaerat.2',1);
 
 CREATE TABLE comments (
   comment_id SERIAL PRIMARY KEY,
