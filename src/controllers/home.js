@@ -1,4 +1,7 @@
 
 exports.get = (req, res) => {
-  res.send('this test');
+  getposts().then(()=>{
+    res.render('home');
+  })
+  
 }
