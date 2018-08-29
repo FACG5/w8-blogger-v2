@@ -19,7 +19,7 @@ INSERT INTO users (name,email,password) VALUES
 );
 
 INSERT INTO posts (post_body, user_id) VALUES
-('helllllllllllllo',1);
+('this is blog',1);
 
 CREATE TABLE comments (
   comment_id SERIAL PRIMARY KEY,
@@ -29,6 +29,11 @@ CREATE TABLE comments (
 );
 
 INSERT INTO comments(comment_body,user_id, post_id) VALUES
-('this is comment ',1,1);
+('this is comment from user1 to post1 1',1,1);
+INSERT INTO comments(comment_body,user_id, post_id) VALUES
+('this is comment from user1 to post1 2',1,1);
+INSERT INTO comments(comment_body,user_id, post_id) VALUES
+('this is comment from user1 to post1 3',1,1);
+
 
 COMMIT;
