@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const handlebar = require('express-handlebars');
-
+const bodyParser = require('body-parser');
 const controllers = require('./controllers/index');
 
 const app = express();
@@ -17,6 +17,9 @@ app.engine(
     defaultLayout: 'main',
   }),
 );
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, '..', 'public')));
