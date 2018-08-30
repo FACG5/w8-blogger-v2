@@ -28,13 +28,13 @@ router.use(error.pageNotFound);
 router.use(error.serverError);
 
 function isLogedIn(req, res, next) {
-  console.log(req.cookies);
-  if (!req.cookies) return res.redirect('/');
+  // console.log(req.cookies);
+  if (!req.cookies) return res.redirect('/login');
   const { jwt } = req.cookies;
-  if (!jwt) return res.redirect('/');
+  if (!jwt) return res.redirect('/login');
 
   verify(jwt, process.env.SECRET, (err, jwt) => {
-    if (err) res.redirect('/');
+    if (err) res.redirect('/login');
     else {
       req.jwt = jwt;
       next();
