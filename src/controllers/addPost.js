@@ -6,7 +6,7 @@ exports.newPost = (req, res, next) => {
     res.redirect('/login');
     return;
   }
-    const obj = {
+  const obj = {
     body: req.body.post,
     userid: req.jwt.id,
   };
