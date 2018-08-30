@@ -1,3 +1,12 @@
+<nav class='navbar'>
+  <span class='nav-name'>othman</span>
+  <a href='/' class='nav-title'>blogger</a>
+  <div class='right'>
+    <a href="/login" class='nav-login'>login</a>
+    <a href="/signup" class='nav-signup'>signup</a>
+  </div>
+</nav>
+<div class='main-container'>
   <section class='postCreate-container'>
     <form class='post-form' method="POST" action="/post/create">
       <textarea rows="8" cols="55" class='postCreate-area' name="post"></textarea>
@@ -5,23 +14,28 @@
     </form>
   </section>
   <section class='post-container'>
-      {{#each obj}}
-			<article class='post'>
-				<span class='post-name'>{{post_name}}</span>
-        <p class='post-body'>{{post_body}}</p>
+    {{#each obj}}
+
+      <article class='post'>
+        <i class='fab fa-pagelines '></i>
+        <span class='poster'>posted by:</span>
+        <span class='post-name'>{{post_name}}</span>
+        <p class='post-body'>&#10077; {{post_body}} &#10078;</p>
         <div class='comment-container'>
-        {{#each comments}}
-          <div class='comment'>
-            <span class='comment-name'>{{name}} : </span>
-            <span class='comment-body'>{{comment_body}}</span>
-          </div>
-        {{/each}}
+          {{#each comments}}
+            <div class='comment'>
+              <span class="commenter"><i class="fas fa-user"></i></span>
+              <span class='comment-name'>{{name}} : </span>
+              <span class='comment-body'>{{comment_body}}</span>
+            </div>
+          {{/each}}
         </div>
-          <form class='comment-form' method="POST" action="/comment/create">
-            <input class='comment-form-input' type="text" name='comment'>
-            <input type="text" value='{{post_id}}' name='post_id' style="display:none">
-            <button class='comment-form-btn' >comment</button>
-          </form>
-			</article>
-      {{/each}}
-	</section>
+        <form class='comment-form' method="POST" action="/comment/create">
+          <input class='comment-form-input' type="text" name='comment' placeholder="Enter Your Comment Here">
+          <input type="text" value='{{post_id}}' name='post_id' style="display:none">
+          <button class='comment-form-btn'><i class="fas fa-comment"></i></button>
+        </form>
+      </article>
+    {{/each}}
+  </section>
+</div>
