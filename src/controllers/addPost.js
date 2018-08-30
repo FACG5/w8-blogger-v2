@@ -2,7 +2,11 @@ const { addPost } = require('./../database/queries/addData');
 
 
 exports.newPost = (req, res, next) => {
-  const obj = {
+  if (!req.userAuth) {
+    res.redirect('/login');
+    return;
+  }
+    const obj = {
     body: req.body.post,
     userid: req.jwt.id,
   };

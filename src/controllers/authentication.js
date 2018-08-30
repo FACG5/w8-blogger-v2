@@ -10,6 +10,7 @@ exports.login = (req, res) => {
       comparePasswords(req.body.password, result.rows[0].password).then(() => {
         const user = {
           id: result.rows[0].user_id,
+          name: result.rows[0].name,
         };
         const loginJWT = sign(user, process.env.SECRET);
         res.cookie('jwt', loginJWT, { maxAge: 900000 });
@@ -32,4 +33,9 @@ exports.signup = (req, res) => {
       // handle error
       res.send('not ok');
     });
+};
+
+exports.signout = (req, res) => {
+  res.clearCookie('jwt');
+  res.redirect('/');
 };
