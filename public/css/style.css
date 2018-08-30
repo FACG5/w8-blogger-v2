@@ -6,7 +6,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 18px 0px;
+  padding: 14px 0px;
   background-color: black;
 }
 
@@ -16,15 +16,29 @@ body {
   font-size: 1rem;
 }
 
-.navbar .title {
-  font-size: 1.2rem;
+.navbar .nav-name {
+  cursor: default;
+  margin-left: 10px;
+  color: white;
 }
 
+.navbar .nav-title {
+  font-size: 1.4rem;
+}
+
+.navbar .nav-login {
+  margin-right: 5px;
+}
+
+.navbar .right {
+  margin-right: 10px;
+}
 
 .main-container{
   /* flex-direction: column; */
   width: 400px;
   margin: auto;
+  margin-top: 10px;
   /* display: flex; */
   /* align-items: center; */
   /* align-content: center; */
@@ -37,7 +51,31 @@ body {
 .postCreate-area{
   width: 200px;
 }
+
 .post{
+  padding: 15px;
   border: 2px solid black;
   border-radius: 10px;
+}
+
+.comment {
+  background-color: darkgrey;
+}
+
+.comment-name {
+  font-size: 1.1rem;
+}
+
+.postCreate-area {
+  width: auto;
+}
+
+.comment-form {
+  margin-top: 7px;
+  display: flex;
+}
+
+.comment-form-input{
+  flex:1;
+  margin-right: 5px;
 }

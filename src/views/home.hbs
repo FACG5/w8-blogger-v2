@@ -1,16 +1,24 @@
   <section class='postCreate-container'>
     <textarea class='postCreate-area'></textarea>
-    <button class='postCreate-btn'>submite</button>
+    <button class='postCreate-btn'>create post</button>
   </section>
   <section class='post-container'>
+      {{#each obj}}
 			<article class='post'>
-				<span class='post-name'>othman</span>
-        <p class='post-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit, dolorum adipisci neque doloribus enim libero minima veniam, possimus fugiat quos nobis numquam, distinctio inventore. Exercitationem maiores repellendus voluptate ea.</p>
-        <div class='post-commentbox'>
-          <form method="POST" action="/comment/create">
-            <input class='post-comment-input' type="text" name='comment'>
-            <button class='post-comment-btn' >submite</button>
-          </form>
+				<span class='post-name'>{{post_name}}</span>
+        <p class='post-body'>{{post_body}}</p>
+        <div class='comment-container'>
+        {{#each comments}}
+          <div class='comment'>
+            <span class='comment-name'>{{name}} : </span>
+            <span class='comment-body'>{{comment_body}}</span>
+          </div>
+        {{/each}}
         </div>
+          <form class='comment-form' method="POST" action="/comment/create">
+            <input class='comment-form-input' type="text" name='comment'>
+            <button class='comment-form-btn' >comment</button>
+          </form>
 			</article>
+      {{/each}}
 	</section>
