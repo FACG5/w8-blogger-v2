@@ -5,6 +5,7 @@ const error = require('./error');
 const user = require('./servePage');
 const auth = require('./authentication');
 const comment = require('./addComment');
+const post = require('./addPost');
 
 const router = express.Router();
 
@@ -17,6 +18,7 @@ router.post('/login', auth.login);
 router.post('/signup', auth.signup);
 
 router.post('/comment/create', comment.postComment);
+router.post('/post/create', post.newPost);
 
 router.use(error.pageNotFound);
 router.use(error.serverError);
