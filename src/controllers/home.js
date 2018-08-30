@@ -5,6 +5,7 @@ exports.get = (req, res) => {
     .then((result) => {
       result.rows.forEach((row, index) => {
         const obj = {
+          post_id: row.post_id,
           post_name: row.user_name,
           post_body: row.post_body,
         };
@@ -15,7 +16,7 @@ exports.get = (req, res) => {
         result.rows[index] = obj;
       });
       const object = result.rows;
-      console.log(object[0]);
+      console.log(object);
       res.render('home', { obj: object});
     }).catch((error) => {
       console.log(error);

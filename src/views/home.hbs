@@ -1,6 +1,8 @@
   <section class='postCreate-container'>
-    <textarea class='postCreate-area'></textarea>
-    <button class='postCreate-btn'>create post</button>
+    <form class='post-form' method="POST" action="/post/create">
+      <textarea rows="8" cols="55" class='postCreate-area' name="post"></textarea>
+      <button class='postCreate-btn'>create post</button>
+    </form>
   </section>
   <section class='post-container'>
       {{#each obj}}
@@ -17,6 +19,7 @@
         </div>
           <form class='comment-form' method="POST" action="/comment/create">
             <input class='comment-form-input' type="text" name='comment'>
+            <input type="text" value='{{post_id}}' name='post_id' style="display:none">
             <button class='comment-form-btn' >comment</button>
           </form>
 			</article>
