@@ -1,7 +1,9 @@
 <section class='login-container'>
   <form method="POST" action="/login">
-    <input class='sign-input login-email' type="text" name='email'>
-    <input class='sign-input login-password' type="password" name='password'>
-    <button class='post-comment-btn' >submite</button>
+    <input id="email" class='sign-input login-email' type="text" name='email' required>
+    <p id="emailErr" class="error"></p>
+    <input id ="password" class='sign-input login-password' type="password" name='password' required>
+    <p id="passwordErr" class="error"></p>
+    <button type="submit" class='post-comment-btn' >submite</button>
   </form>
 </section>
