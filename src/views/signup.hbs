@@ -1,8 +1,13 @@
 <section class='signup-container'>
   <form method="POST" action="/signup">
-    <input class='sign-input signup-name' type="text" name='name'>
-    <input class='sign-input signup-email' type="text" name='email'>
-    <input class='sign-input signup-password' type="password" name='password'>
-    <button class='post-comment-btn' >submit</button>
+    <input id="name" class='sign-input signup-name' type="text" name='name' required>
+ <p id="nameErr" class="error"></p>
+    <input id="email" class='sign-input signup-email' type="text" name='email' required>
+<p id="emailErr" class="error"></p>
+    <input id="password" class='sign-input signup-password' type="password" name='password' required>
+<p id="passwordErr" class="error"></p>
+<input id="confirmPassword" class='sign-input signup-confirmpassword' type="password" required>
+<p id="confirmErr" class="error"></p>
+    <button type="submit" class='post-comment-btn' >submit</button>
   </form>
 </section>
