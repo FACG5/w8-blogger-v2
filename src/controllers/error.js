@@ -13,4 +13,5 @@ exports.serverError = (err, req, res, next) => {
     statusCode: 500,
     errorMessage: 'Internal server error',
   });
+  next();
 };
