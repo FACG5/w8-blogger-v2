@@ -6,5 +6,5 @@ exports.login = (req, res) => {
 };
 
 exports.signup = (req, res) => {
-  res.render('signup');
+  res.render('signup', {js:'signup.js'});
 };
