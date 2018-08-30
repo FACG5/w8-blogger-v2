@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS users, posts, comments CASCADE;
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    email VARCHAR(100),
-    password VARCHAR(100)
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
 );
 
 INSERT INTO users (name,email,password) VALUES
