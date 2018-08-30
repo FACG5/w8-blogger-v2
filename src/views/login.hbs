@@ -1,9 +1,12 @@
 <section class='login-container'>
   <form method="POST" action="/login">
-    <input id="email" class='sign-input login-email' type="text" name='email' required>
+    <input id="email" class='sign-input login-email' type="text" name='email'placeholder="Enter your Email" required>
     <p id="emailErr" class="error"></p>
-    <input id ="password" class='sign-input login-password' type="password" name='password' required>
+    <input id ="password" class='sign-input login-password' type="password" name='password'placeholder="Enter Your Password" required>
     <p id="passwordErr" class="error"></p>
     <button type="submit" class='post-comment-btn' >submite</button>
+    <div class="signin">
+         <p>Create a new account  <a href="/signup">Sign up</a>.</p>
+       </div>
   </form>
 </section>
