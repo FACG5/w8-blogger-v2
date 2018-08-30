@@ -1,15 +1,16 @@
-const { post } = require('./../database/queries/addData');
+const { addComment } = require('./../database/queries/addData');
 
-exports.postComment = ({ body }, res, next) => {
-  //user id from cokce
-  // console.log(body);
-  const obj = { 
-    body,
-    userid,
-    postid,
+exports.postComment = (req, res, next) => {
+  console.log(req.body);
+  console.log(req.jwt);
+  const obj = {
+    body: req.body.comment,
+    userid: req.jwt.id,
+    postid: req.body.post_id,
   };
-  // post.addComment(body,user,post).then(()=>{
-
-  //   res.redirect('/');
-  // }).catch(err => console.log(err));
+  addComment(obj)
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch(err => console.log(err));
 };
