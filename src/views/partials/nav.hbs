@@ -1,8 +1,13 @@
 <nav class='navbar'>
-    <span class='nav-name'></span>
-    <a href='/' class='nav-title'>bloger</a>
+  <span class='nav-name'>{{name}}</span>
+
+  <a href='/' class='nav-title'>bloger</a>
   <div class='right'>
+    {{#if id}}
     <a href="/login" class='nav-login'>login</a>
     <a href="/signup" class='nav-signup'>signup</a>
+    {{else}}
+    <a href="/logout" class='nav-signup'>logout</a>
+    {{/if}}
   </div>
 </nav>
