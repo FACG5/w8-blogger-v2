@@ -1,6 +1,14 @@
 const { getposts } = require('./../database/queries/getData');
 
 exports.get = (req, res) => {
+  let id = false;
+  let name = 'Guest';
+  if (req.userAuth) {
+    name = req.jwt.name;
+    id = false;
+  } else {
+    id = true;
+  }
   getposts()
     .then((result) => {
       result.rows.forEach((row, index) => {
@@ -16,9 +24,9 @@ exports.get = (req, res) => {
         result.rows[index] = obj;
       });
       const object = result.rows;
-      // console.log(object);
-      res.render('home', { obj: object,css:'style'});
-    }).catch((error) => {
+      res.render('home', { obj: object, id: id, name, css: 'style' });
+    })
+    .catch((error) => {
       console.log(error);
       res.send(error);
     });

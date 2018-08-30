@@ -1,6 +1,4 @@
 const bcrypt = require('bcryptjs');
-const { parse } = require('cookie');
-const { verify } = require('jsonwebtoken');
 
 const hashPassword = password => new Promise((resolve, reject) => {
   bcrypt.genSalt(10, (err, salt) => {
@@ -35,21 +33,8 @@ const comparePasswords = (password, hashedPassword) => new Promise((resolve, rej
   });
 });
 
-const isAuth = (req, cb) => {
-  if (!req.headers.cookie) return cb(false);
-  const { jwt } = parse(req.headers.cookie);
-  if (!jwt) return cb(false);
-
-  verify(jwt, process.env.SECRET, (err, jwt) => {
-    if (err) cb(false);
-    else {
-      cb(null, jwt);
-    }
-  });
-};
 
 module.exports = {
-  isAuth,
   comparePasswords,
   hashPassword,
 };

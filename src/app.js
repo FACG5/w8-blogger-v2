@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const handlebar = require('express-handlebars');
 const bodyParser = require('body-parser');
-const controllers = require('./controllers/index');
 const cookieParser = require('cookie-parser');
+const controllers = require('./controllers/index');
 
 const app = express();
 
