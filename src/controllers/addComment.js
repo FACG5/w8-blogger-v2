@@ -4,6 +4,11 @@ exports.postComment = (req, res, next) => {
   if (!req.userAuth) {
     res.redirect('/login');
   } else {
+    if (req.body.comment.trim() === '') {
+      res.redirect('/');
+      return;
+    }
+
     const obj = {
       body: req.body.comment,
       userid: req.jwt.id,

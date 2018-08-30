@@ -6,6 +6,10 @@ exports.newPost = (req, res, next) => {
     res.redirect('/login');
     return;
   }
+  if (req.body.post.trim() === '') {
+    res.redirect('/');
+    return;
+  }
   const obj = {
     body: req.body.post,
     userid: req.jwt.id,
