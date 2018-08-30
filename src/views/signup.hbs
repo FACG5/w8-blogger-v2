@@ -1,13 +1,16 @@
 <section class='signup-container'>
   <form method="POST" action="/signup">
-    <input id="name" class='sign-input signup-name' type="text" name='name' required>
+    <input id="name" class='sign-input signup-name' type="text" name='name' placeholder="Enter Your Name Here"required>
  <p id="nameErr" class="error"></p>
-    <input id="email" class='sign-input signup-email' type="text" name='email' required>
+    <input id="email" class='sign-input signup-email' type="text" name='email'placeholder="Enter Your Email Here" required pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$>
 <p id="emailErr" class="error"></p>
-    <input id="password" class='sign-input signup-password' type="password" name='password' required>
+    <input id="password" class='sign-input signup-password' type="password" name='password'placeholder="Enter Your Password Here"  required>
 <p id="passwordErr" class="error"></p>
-<input id="confirmPassword" class='sign-input signup-confirmpassword' type="password" required>
+<input id="confirmPassword" class='sign-input signup-confirmpassword' type="password" placeholder="Enter Your Reapeted Password Here" required>
 <p id="confirmErr" class="error"></p>
+<div class="signin">
+        <p>Already have an account? <a href="/login">Sign in</a>.</p>
+      </div>
     <button type="submit" class='post-comment-btn' >submit</button>
   </form>
 </section>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: black;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.login-container {
+  max-width: 500px;
+  background-color: #fff;
+  margin: 6% auto;
+  padding: 25px;
+  height:auto;
+  border-radius: 10px 10px 10px 10px;
+}
+
+ input[type=password], input[type=text] {
+  padding: 6px 16px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #A8005A;
+  border-radius: 15px;
+  height: 35px;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  background: #ffe6eb;
+  line-height: 24px;
+}
+ input[type=password]:focus,[type=email]:focus {
+  border: 1px solid #FF0028;
+  outline: none;
+}
+
+.post-comment-btn{
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  padding: 8px 10px;
+  color: white;
+  background-color: #38610c;
+  border-radius: 2px;
+  font-weight: 450;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.post-comment-btn:hover {
+  opacity: 0.5;
+
+}
+.error {
+  color: #FF0028;
+}
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
