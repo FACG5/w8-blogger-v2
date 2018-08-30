@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Monda');
+
+* {
+padding: 0;
+margin: 0;
+}
+body{
+font-family: 'Monda', sans-serif;
+background-color: #F8F8F8;
+
+}
+.error{
+  margin-top: 80px;
+ text-align: center;
+}
+
+.fa-exclamation-triangle{
+  color: #A8005A;
+
+}
+
+.error__desc{
+font-size: 5rem;
+letter-spacing:5px;
+}
+.error__desc .error__msg{
+  display: block;
+font-size: 2rem;
+letter-spacing:5px;
+color: #38610c;
+}
+
+p{
+  margin-top: 1rem;
+}
