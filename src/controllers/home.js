@@ -15,7 +15,7 @@ exports.get = (req, res) => {
         result.rows[index] = obj;
       });
       const object = result.rows;
-      console.log(object[0]);
+      // console.log(object[0]);
       res.render('home', { obj: object});
     }).catch((error) => {
       console.log(error);

@@ -1,6 +1,8 @@
   <section class='postCreate-container'>
-    <textarea class='postCreate-area'></textarea>
-    <button class='postCreate-btn'>create post</button>
+    <form class='post-form' method="POST" action="/post/create">
+      <textarea rows="8" cols="55" class='postCreate-area' name="post"></textarea>
+      <button class='postCreate-btn'>create post</button>
+    </form>
   </section>
   <section class='post-container'>
       {{#each obj}}
