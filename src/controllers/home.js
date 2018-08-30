@@ -17,13 +17,9 @@ exports.get = (req, res) => {
       });
       const object = result.rows;
       // console.log(object);
-      res.render('home', { obj: object});
+      res.render('home', { obj: object,css:'style'});
     }).catch((error) => {
       console.log(error);
       res.send(error);
     });
 };
-
-
-
-
