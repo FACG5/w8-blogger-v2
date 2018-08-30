@@ -4,6 +4,7 @@ exports.pageNotFound = (req, res) => {
     layout: 'error',
     statusCode: 404,
     errorMessage: 'Page not found',
+    css: 'error'
   });
 };
 
@@ -12,6 +13,7 @@ exports.serverError = (err, req, res, next) => {
     layout: 'error',
     statusCode: 500,
     errorMessage: 'Internal server error',
+    css: 'error'
   });
   next();
 };
